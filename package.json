@@ -7,6 +7,7 @@
   "author": "Jakob J. Kolb <kolb@hardfork.io>",
   "license": "MIT",
   "scripts": {
+    "build:docs:target": "redoc-cli bundle -o build/docs/target/index.html specs/targetapi.yml",
     "eslint": "eslint --max-warnings=0 'src/**/*.ts'",
     "prettier": "prettier --check 'src/**/*.ts'",
     "lint": "yarn eslint && yarn prettier",
@@ -37,6 +38,7 @@
     "husky": "^4.3.0",
     "jest": "^26.5.3",
     "prettier": "^2.1.2",
+    "redoc-cli": "^0.9.13",
     "supertest": "^6.0.1",
     "typescript": "^4.0.3"
   },
