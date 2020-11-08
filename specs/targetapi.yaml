@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: Label Layout
+  description: A layouting microservice for packaging and shipping labels in the EOTL ecosystem.
+  version: 1.0.0
+  contact:
+    name: "EOTL"
+    url: "https://eotl.supply"
+    email: "jakob.j.kolb@posteo.de"
+servers:
+  - url: 'https'
+paths:
+  /layout:
+    post:
+      description: "Returns an svg layout of the structured label data"
+      summary: "Layout labels"
+      requestBody:
+        required: true
+        content:
+          json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/Label"
+
+
+      responses:
+        "200":
+          description: "A layout file in svg format."
+          content:
+            application/svg:
+              schema:
+                type: string
+                format: base64
+
+components:
+  schemas:
+    Label:
+      type: object
+      properties:
+        title:
+          required: true
+          type: string
+          description: "The title of the label"
+          example: "Wheat Flour"
+        subtitle:
+          required: false
+          type: string
+          description: "An explanatory subtitle"
+          example: "Type 405"
+        url:
+          required: false
+          type: url
+          description: "A url pointing to e.g. tracking or content info."
+          example: "https://eotl.supply/datasheets/3lasdio234"
+        handle:
+          required: false
+          type: string
+          description: "A 5 character handle to reference a shipment by"
+          example: "BLN13"
+        icon:
+          required: false
+          type: string
+          format: base64
+          example: "iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CLGPC..."
+          description: "An svg icon as base64 encoded string"
+
+  
