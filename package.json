@@ -7,7 +7,7 @@
   "author": "Jakob J. Kolb <kolb@hardfork.io>",
   "license": "MIT",
   "scripts": {
-    "build:docs:target": "redoc-cli bundle -o build/docs/target/index.html specs/targetapi.yml",
+    "build:docs:target": "redoc-cli bundle -o docs/target/index.html specs/targetapi.yaml",
     "eslint": "eslint --max-warnings=0 'src/**/*.ts'",
     "prettier": "prettier --check 'src/**/*.ts'",
     "lint": "yarn eslint && yarn prettier",
