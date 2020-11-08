@@ -1,0 +1,40 @@
+{
+  "name": "label-maker",
+  "version": "0.0.1",
+  "description": "A layouting microservice for packaging and shipping labels.",
+  "main": "index.js",
+  "repository": "git@github.com:jakobkolb/label-maker.git",
+  "author": "Jakob J. Kolb <kolb@hardfork.io>",
+  "license": "MIT",
+  "scripts": {
+    "eslint": "eslint --max-warnings=0 'src/**/*.ts'",
+    "prettier": "prettier --check 'src/**/*.ts'",
+    "lint": "yarn eslint && yarn prettier",
+    "test": "NODE_ENV=test jest",
+    "check:ts": "yarn tsc -p tsconfig.dryrun.json"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@types/chai": "^4.2.14",
+    "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "babel": "^6.23.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "jest": "^26.5.3",
+    "prettier": "^2.1.2",
+    "supertest": "^6.0.1",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ramda": "^0.27.1"
+  }
+}

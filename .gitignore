@@ -1,0 +1,5 @@
+# editor files
+.idea
+
+# packages
+node_modules
