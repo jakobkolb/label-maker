@@ -1,4 +1,4 @@
-import express, {Application, json} from 'express'
+import express, { Application } from 'express'
 
 export const createApp = (): Application => {
     const app = express()
