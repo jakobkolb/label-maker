@@ -11,7 +11,8 @@
     "prettier": "prettier --check 'src/**/*.ts'",
     "lint": "yarn eslint && yarn prettier",
     "test": "NODE_ENV=test jest",
-    "check:ts": "yarn tsc -p tsconfig.dryrun.json"
+    "check:ts": "yarn tsc -p tsconfig.dryrun.json",
+    "start": "babel-node -x .ts src/server.ts"
   },
   "husky": {
     "hooks": {
@@ -28,7 +29,7 @@
     "@types/jest": "^26.0.14",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
-    "babel": "^6.23.0",
+    "babel-loader": "^8.1.0",
     "chai": "^4.2.0",
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.12.0",
@@ -40,6 +41,7 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
+    "@babel/runtime": "^7.12.5",
     "@types/express": "^4.17.8",
     "@types/supertest": "^2.0.10",
     "express": "^4.17.1",
